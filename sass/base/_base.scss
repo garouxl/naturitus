@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: 0;
+  backface-visibility: hidden;
+}
+
+html {
+  /* padrão 16px, para ter 10px em %  10px / 16px x 100% */
+  /* todas as outras medidas serão em REM: 1rem === 10px */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
