@@ -11,6 +11,7 @@
 
   &__logo {
     width: 15rem;
+    animation: filters 36s infinite ease-in-out;
   }
 
   &__navigation {
@@ -36,6 +37,7 @@
     &:visited {
       color: $color-gray-light-1;
       background-color: $color-gray-dark-3;
+      font-weight: 300;
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;

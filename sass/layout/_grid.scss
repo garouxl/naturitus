@@ -1,12 +1,11 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
+  @include clearfix;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   };
-
-  @include clearfix;
 
   [class^="col-"] {
     float: left;
