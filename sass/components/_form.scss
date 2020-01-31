@@ -81,8 +81,8 @@
     &::after {
       content: "";
       display: block;
-      height: 1.8rem;
-      width: 1.8rem;
+      height: 1.2rem;
+      width: 1.2rem;
       border-radius: 50%;
       background-color: $color-primary;
       position: absolute;
@@ -100,6 +100,7 @@
   }
 
   &__radio-input:checked ~ &__radio-label &__radio-button{
-    border: 3px solid $color-primary;
+    border: 1.5px solid $color-primary;
   }
+
 }
