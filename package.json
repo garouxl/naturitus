@@ -1,7 +1,7 @@
 {
-  "name": "natours",
+  "name": "naturitus",
   "version": "1.0.0",
-  "description": "landing page for natours",
+  "description": "landing page for naturitus",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
