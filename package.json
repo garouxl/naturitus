@@ -1,6 +1,7 @@
 {
   "name": "naturitus",
   "version": "1.0.0",
+  "homepage": "https://garouxl.github.io/naturitus",
   "description": "landing page for naturitus",
   "main": "index.js",
   "scripts": {
