@@ -47,8 +47,12 @@
     &:hover,
     &:active {
       color: $color-primary;
+      background: linear-gradient(180deg, $color-primary-light, $color-primary-dark);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+      background-clip: text;
       box-shadow: 0 1rem 2rem rgba($color-black, .4);
-      transform: scale(1.25);
+      transform: scale(1.1);
     }
   }
 

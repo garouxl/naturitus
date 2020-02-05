@@ -464,6 +464,71 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button {
   border: 1.5px solid #55c57a; }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s all; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: table;
+    width: 75%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .2s; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.66667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #aaa;
+    hyphens: auto; }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-shadow: 0;
+    display: inline-block;
+    transition: .2s all;
+    line-height: 1; }
+  .popup__close:hover {
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    color: #28b485;
+    transform: translateY(-2px); }
+  .popup__close:active {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px); }
+
 .navigation__checkbox {
   display: none; }
 
@@ -656,8 +721,12 @@ body {
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
     color: #55c57a;
+    background: linear-gradient(180deg, #7ed56f, #28b485);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: scale(1.25); }
+    transform: scale(1.1); }
   .footer__copyright {
     border-top: 1px solid #777;
     padding: 2rem 0 0 0;
