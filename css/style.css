@@ -952,6 +952,9 @@ body {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
+    @media (max-width: 37.5em) {
+      .footer__navigation {
+        padding: 1.5rem 0 0 0; } }
   .footer__list {
     list-style: none; }
   .footer__item {
