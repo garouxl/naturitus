@@ -18,7 +18,7 @@
 
   @include respond("phone") {
     max-width: $grid-width-small;
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 
   .col-1-of-2 {
