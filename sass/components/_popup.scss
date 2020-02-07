@@ -27,6 +27,10 @@
     overflow: hidden;
     transform: translate(-50%, -50%)  scale(.25);
     transition: all .5s .2s;
+
+    @include respond("tab-land") {
+      display: block;
+    }
   }
 
   &:target &__content {
@@ -36,6 +40,24 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond("tab-land") {
+      display: block;
+      float: right;
+
+      &::after {
+        @include boxed;
+        background-image: linear-gradient(
+          45deg,
+          rgba($color-white,.1) 50%,
+          rgba($color-white, 1) 90%
+        );
+      }
+    }
+
+    @include respond("phone") {
+      display: none;
+    }
   }
 
   &__right {
@@ -43,11 +65,33 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond("tab-land") {
+      position: relative;
+      display: block;
+      float: left;
+    }
+
+    @include respond("phone") {
+      width: 100%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond("tab-land") {
+      &:nth-child(2) {
+        border-radius: 0;
+      }
+    }
+
+    @include respond("tab-port") {
+      &:nth-child(2) {
+        border-radius: 0 0 0 3px;
+      }
+    }
   }
 
   &__text {
@@ -68,10 +112,26 @@
       right: 2.5rem;
       font-size: 2rem;
       text-decoration: none;
-      text-shadow: 0;
+      text-shadow: 0 0 0;
       display: inline-block;
       transition: .2s all;
       line-height: 1;
+
+      @include respond("tab-land") {
+        right: -30rem;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      @include respond("tab-port") {
+        right: -25rem;
+
+      }
+
+      @include respond("phone") {
+        right: 2.5rem;
+        font-weight: 200;
+      }
     }
 
     &:hover {
