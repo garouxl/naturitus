@@ -79,7 +79,7 @@
     }
 
     @include respond("phone") {
-      padding: 2rem 3rem;
+      padding: 3rem 4rem;
       width: 100%;
     }
   }
@@ -124,8 +124,8 @@
     &:visited {
       color: $color-gray-dark-1;
       position: absolute;
-      top: 2.5rem;
-      right: 2.5rem;
+      top: 1rem;
+      right: 1.5rem;
       font-size: 3rem;
       font-weight: 700;
       text-decoration: none;
