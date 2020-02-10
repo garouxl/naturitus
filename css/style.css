@@ -560,6 +560,8 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  .form__radio-group *:active {
+    background-color: transparent; }
   @media (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
@@ -702,24 +704,14 @@ body {
     position: absolute;
     top: 2.5rem;
     right: 2.5rem;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
     text-decoration: none;
     text-shadow: 0 0 0;
     display: inline-block;
     transition: .2s all;
-    line-height: 1; }
-    @media (max-width: 75em) {
-      .popup__close:link, .popup__close:visited {
-        right: -30rem;
-        font-size: 3rem;
-        font-weight: 700; } }
-    @media (max-width: 56.25em) {
-      .popup__close:link, .popup__close:visited {
-        right: -25rem; } }
-    @media (max-width: 37.5em) {
-      .popup__close:link, .popup__close:visited {
-        right: 2.5rem;
-        font-weight: 200; } }
+    line-height: 1;
+    z-index: 11; }
   .popup__close:hover {
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     color: #28b485;
@@ -783,8 +775,7 @@ body {
 
 .navigation__list {
   list-style: none;
-  text-align: center;
-  width: 100%; }
+  text-align: center; }
   .navigation__list {
     position: absolute;
     top: 50%;

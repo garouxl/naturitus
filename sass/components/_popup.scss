@@ -126,28 +126,14 @@
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 700;
       text-decoration: none;
       text-shadow: 0 0 0;
       display: inline-block;
       transition: .2s all;
       line-height: 1;
-
-      @include respond("tab-land") {
-        right: -30rem;
-        font-size: 3rem;
-        font-weight: 700;
-      }
-
-      @include respond("tab-port") {
-        right: -25rem;
-
-      }
-
-      @include respond("phone") {
-        right: 2.5rem;
-        font-weight: 200;
-      }
+      z-index: 11;
     }
 
     &:hover {

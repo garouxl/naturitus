@@ -71,9 +71,28 @@
             </div>
             <div class="col-1-of-2">
               <div class="composition">
-                <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                <img
+                  srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 1" class="composition__photo composition__photo--p1"
+                  src="img/nat-1-large.jpg"
+                >
+                <img
+                  srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 2" class="composition__photo composition__photo--p2"
+                  src="img/nat-2-large.jpg"
+                >
+                <img
+                  srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 3" class="composition__photo composition__photo--p3"
+                  src="img/nat-3-large.jpg"
+                >
+
+
+
+
               </div>
             </div>
           </div>
@@ -358,7 +377,17 @@
       </main>
       <footer class="footer">
         <div class="footer__logo-box">
-          <img src="img/logo-green-2x.png" alt="logo full" class="footer__logo">
+          <picture class="footer__logo">
+            <source
+              srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+              media="(max-width: 37.5em)"
+            >
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full logo"
+              src="img/logo-green-2x.png"
+            >
+          </picture>
         </div>
         <div class="row">
           <div class="col-1-of-2 u-margin-bottom-small ">
@@ -389,12 +418,12 @@
       </footer>
       <div class="popup" id="popup">
         <div class="popup__content">
+          <a href="#section-tours" class="popup__close">&times;</a>
           <div class="popup__left">
             <img src="img/nat-8.jpg" alt="Tour foto" class="popup__img">
             <img src="img/nat-9.jpg" alt="Tour foto" class="popup__img">
           </div>
           <div class="popup__right">
-            <a href="#section-tours" class="popup__close">&otimes;</a>
             <h2 class="heading-secondary u-margin-bottom-small">Comece a agendar agora!</h2>
             <h3 class="heading-tertiary u-margin-bottom-small">Importante &ndash; Leia os termos antes de agendar.</h3>
             <p class="popup__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, dolor libero officia veritatis consectetur eos sequi earum! Ipsam, sequi, non similique asperiores quasi tenetur id impedit a nulla neque corporis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos perferendis libero, doloremque, numquam eligendi voluptatibus error quis commodi deleniti laboriosam dolor sapiente, id nobis veniam autem optio! Rerum, incidunt hic?</p>
