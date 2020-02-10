@@ -10,6 +10,11 @@
   visibility: hidden;
   transition: .3s all;
 
+  @supports(backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .2);
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
