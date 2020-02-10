@@ -42,6 +42,12 @@ $breakpoint args choice:
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @keyframes filters {
   0% {
     filter: hue-rotate(0deg); }
@@ -170,6 +176,10 @@ body {
 .u-margin-top-medium {
   margin-top: 4rem !important; }
 
+.fade-in {
+  animation: fadeIn 0.75s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -220,7 +230,8 @@ body {
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  animation-delay: 1s; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
