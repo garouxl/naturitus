@@ -807,7 +807,8 @@ body {
   display: inline-block; }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80); }
+  transform: scale(80);
+  animation: filters 1s ease-in-out; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   transform: translateX(0);

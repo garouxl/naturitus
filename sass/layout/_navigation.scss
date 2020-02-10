@@ -110,6 +110,7 @@
   // functionality
   &__checkbox:checked ~ &__background {
     transform: scale(80);
+    animation: filters 1s ease-in-out;
   }
 
   &__checkbox:checked ~ &__nav {
