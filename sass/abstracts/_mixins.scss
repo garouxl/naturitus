@@ -59,3 +59,12 @@ $breakpoint args choice:
     @media (min-width: 112.5em) { @content; } // 1800px
   }
 }
+
+
+// mixin para querie de imagem
+
+@mixin respond-img {
+  @media (min-resolution: 192dpi) and (max-width: 37.5em), (min-width: 112.5em){
+    @content
+  }
+}

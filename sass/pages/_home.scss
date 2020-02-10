@@ -15,17 +15,26 @@
     to right bottom,
     rgba($color-primary-light, .8),
     rgba($color-primary-dark, .8)),
-    url("../img/nat-4.jpg");
+    url("../img/nat-4-small.jpg");
   background-size: cover;
   transform: skewY(-7deg);
+
+  @include respond("tab-port") {
+    padding: 10rem 0;
+  }
+
+  @include respond-img {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, .8),
+      rgba($color-primary-dark, .8)),
+      url("../img/nat-4.jpg");
+  }
 
   & > * {
     transform: skewY(7deg);
   }
 
-  @include respond("tab-port") {
-    padding: 10rem 0;
-  }
 }
 
 .section-tours {
