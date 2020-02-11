@@ -779,7 +779,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-color: #7ed56f;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 7; }
   @media only screen and (max-width: 56.25em) {
@@ -793,13 +793,17 @@ body {
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
+  width: 40%;
   display: table;
   position: fixed;
   top: 0;
   z-index: 8;
   opacity: 0;
-  transition: transform 0.5s, cubic-bezier(1, -0.25, 0, 1.15) 0.5s; }
+  transition: transform 0.5s, cubic-bezier(1, -0.25, 0, 1.15) 0.5s;
+  background-color: #7ed56f;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .navigation__list {
   display: table-cell;
@@ -838,7 +842,8 @@ body {
   animation: filters 1s ease-in-out; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1; }
+  opacity: 1;
+  animation: filters 1s ease-in-out; }
 
 .navigation__icon {
   position: relative;
