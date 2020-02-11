@@ -462,9 +462,11 @@
     <script>
       {
         'use strict'
-        document.querySelectorAll('[data-js="navigation-link"]').forEach(link => {
+        const $navigationLinks = document.querySelectorAll('[data-js="navigation-link"]')
+        const $navigationToggle = document.querySelector('[data-js="navigation-toggle"]')
+        $navigationLinks.forEach(link => {
           link.addEventListener('click', function () {
-            document.querySelector('[data-js="navigation-toggle"]').checked = false
+            $navigationToggle.checked = false
           })
         })
       }
