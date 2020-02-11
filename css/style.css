@@ -779,8 +779,8 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-color: #7ed56f;
-  transition: transform .5s ease-in-out;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 7; }
   @media only screen and (max-width: 56.25em) {
     .navigation__background {
@@ -798,8 +798,8 @@ body {
   position: fixed;
   top: 0;
   z-index: 8;
-  transform: translateX(100%);
-  transition: transform .5s, ease-in-out .5s; }
+  opacity: 0;
+  transition: transform 0.5s, cubic-bezier(1, -0.25, 0, 1.15) 0.5s; }
 
 .navigation__list {
   display: table-cell;
@@ -838,7 +838,7 @@ body {
   animation: filters 1s ease-in-out; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
-  transform: translateX(0); }
+  opacity: 1; }
 
 .navigation__icon {
   position: relative;
