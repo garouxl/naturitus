@@ -14,7 +14,7 @@
     </head>
     <body class="fade-in">
       <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" data-js="navigation-toggle">
         <label for="navi-toggle" class="navigation__button">
           <span class="navigation__icon"></span>
         </label>
@@ -22,23 +22,23 @@
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="" class="navigation__link">
+              <a href="#section-about" class="navigation__link" data-js="navigation-link">
                 <span class="navigation__number">01</span> Sobre Naturitus</a>
             </li>
             <li class="navigation__item">
-              <a href="" class="navigation__link">
+              <a href="#section-features" class="navigation__link" data-js="navigation-link">
                 <span class="navigation__number">02</span> Seus benefícios</a>
             </li>
             <li class="navigation__item">
-              <a href="" class="navigation__link">
+              <a href="#section-tours" class="navigation__link" data-js="navigation-link">
                 <span class="navigation__number">03</span> Tours populares</a>
             </li>
             <li class="navigation__item">
-              <a href="" class="navigation__link">
+              <a href="#section-stories" class="navigation__link" data-js="navigation-link">
                 <span class="navigation__number">04</span> Histórias</a>
             </li>
             <li class="navigation__item">
-              <a href="" class="navigation__link">
+              <a href="#section-book" class="navigation__link" data-js="navigation-link">
                 <span class="navigation__number">05</span> Agende agora</a>
             </li>
           </ul>
@@ -53,11 +53,11 @@
             <span class="heading-primary--main">Naturitus</span>
             <span class="heading-primary--sub">a vida real é lá fora</span>
           </h1>
-          <a href="#" class="btn btn--white btn--animated" src="#">descubra mais</a>
+          <a href="#section-tours" class="btn btn--white btn--animated" src="#">descubra mais</a>
          </div>
       </header>
       <main>
-        <section class="section-about">
+        <section id="section-about" class="section-about">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">Viagens para aventureiros</h2>
           </div>
@@ -89,15 +89,11 @@
                   alt="Photo 3" class="composition__photo composition__photo--p3"
                   src="img/nat-3-large.jpg"
                 >
-
-
-
-
               </div>
             </div>
           </div>
         </section>
-        <section class="section-features">
+        <section class="section-features" id="section-features">
             <div class="row">
               <div class="col-1-of-4">
                 <div class="feature-box">
@@ -265,7 +261,7 @@
             <a href="#" class="btn btn--green">Descubra todas as viagens</a>
           </div>
         </section>
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
           <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
               <source src="img/video.mp4" type="video/mp4">
@@ -312,7 +308,7 @@
             <a href="#" class="btn-text">Leia todas as historias &rarr;</a>
           </div>
         </section>
-        <section class="section-book">
+        <section class="section-book" id="section-book">
           <div class="row">
             <div class="book">
               <div class="book__form">
@@ -417,7 +413,7 @@
         </div>
       </footer>
       <div class="popup" id="popup">
-        <div class="popup__content">
+        <div class="popup__content" data-js="popup">
           <a href="#section-tours" class="popup__close">&times;</a>
           <div class="popup__left">
             <img src="img/nat-8.jpg" alt="Tour foto" class="popup__img">
@@ -463,4 +459,14 @@
         </div>
       </section> -->
     </body>
+    <script>
+      {
+        'use strict'
+        document.querySelectorAll('[data-js="navigation-link"]').forEach(link => {
+          link.addEventListener('click', function () {
+            document.querySelector('[data-js="navigation-toggle"]').checked = false
+          })
+        })
+      }
+    </script>
 </html>
